@@ -19,17 +19,25 @@
         <asp:TextBox runat="server" CssClass="form-control" ID="txtContact"></asp:TextBox>
     </div>
    
+    <div class="mb-3 mt-3">
+        <label>Email:</label>
+        <%--<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">--%>
+        <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail"></asp:TextBox>
+    </div>
+   
   
     <div class="mb-3 mt-3">
         <label>City:</label>
         <%--<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">--%>
-       <asp:DropDownList CssClass="form-control" runat="server">
+       <asp:DropDownList CssClass="form-control" ID="ddlCities" runat="server">
+           <asp:ListItem>Select City</asp:ListItem>
            <asp:ListItem>Kolhapur</asp:ListItem>
            <asp:ListItem>Dehi</asp:ListItem>
            <asp:ListItem>Mumbai</asp:ListItem>
+           <asp:ListItem>Nagpur</asp:ListItem>
        </asp:DropDownList>
     </div>
-   <asp:Button runat="server" ID="btnSubmit" CssClass="btn btn-outline-success" Text="Submit" />
+   <asp:Button runat="server" OnClick="btnSubmit_Click" ID="btnSubmit" CssClass="btn btn-outline-success" Text="Submit" />
   
     
 
